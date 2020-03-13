@@ -18,5 +18,6 @@ routes.post('/clients', ClientController.store);
 // routes actions order service
 routes.post('/orderservices', OrderserviceController.create);
 routes.get('/orderservices', OrderserviceController.list);
+routes.put('/orderservices', OrderserviceController.update);
 
 export default routes;
