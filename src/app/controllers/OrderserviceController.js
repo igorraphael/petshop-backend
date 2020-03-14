@@ -61,6 +61,29 @@ class OrderserviceController {
   }
 
   /**
+   * List one order service.
+   */
+  async index(req, res) {
+    const order = await Orderservice.findByPk(req.params.id, {
+      attributes: [
+        'id',
+        'client_id',
+        'is_package',
+        'services',
+        'situation',
+        'amount',
+        'date_order',
+      ],
+      include: [{ model: Client, as: 'client', attributes: ['name'] }],
+    });
+    if (!order) {
+      return res.status(400).json({ error: 'Order service not found.' });
+    }
+
+    return res.json(order);
+  }
+
+  /**
    * Update order service
    */
   async update(req, res) {
