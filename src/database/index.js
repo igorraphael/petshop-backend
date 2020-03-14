@@ -3,8 +3,9 @@ import dbConfig from '../config/database';
 import User from '../app/models/User';
 import Client from '../app/models/Client';
 import Orderservice from '../app/models/Orderservice';
+import Expense from '../app/models/Expense';
 
-const models = [User, Client, Orderservice];
+const models = [User, Client, Orderservice, Expense];
 
 class Database {
   constructor() {
