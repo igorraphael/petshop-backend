@@ -13,6 +13,15 @@ class ClientController {
     }
   }
 
+  async list(req, res) {
+    try {
+      const clients = await Client.findAll();
+      return res.json(clients);
+    } catch (error) {
+      return res.status(500).json({ error: 'Internal server error.' });
+    }
+  }
+
   async update(req, res) {
     return res.json('Route update user');
   }

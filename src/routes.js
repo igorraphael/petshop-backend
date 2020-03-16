@@ -5,6 +5,7 @@ import SessionController from './app/controllers/SessionController';
 import ClientController from './app/controllers/ClientController';
 import OrderserviceController from './app/controllers/OrderserviceController';
 import ExpenseController from './app/controllers/ExpenseController';
+import CashflowController from './app/controllers/CashflowController';
 // Middleware Authorization
 import authMiddleware from './app/middlewares/auth';
 //
@@ -16,6 +17,7 @@ routes.use(authMiddleware);
 routes.put('/users', UserController.update);
 // routes actions client
 routes.post('/clients', ClientController.store);
+routes.get('/clients', ClientController.list);
 // routes actions order service
 routes.post('/orderservices', OrderserviceController.create);
 routes.get('/orderservices', OrderserviceController.list);
@@ -26,5 +28,6 @@ routes.post('/expenses', ExpenseController.create);
 routes.get('/expenses', ExpenseController.list);
 routes.put('/expenses', ExpenseController.update);
 routes.delete('/expenses/:id', ExpenseController.delete);
+// routes actions cash flush
 
 export default routes;
