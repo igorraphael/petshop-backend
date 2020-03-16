@@ -28,6 +28,7 @@ routes.post('/expenses', ExpenseController.create);
 routes.get('/expenses', ExpenseController.list);
 routes.put('/expenses', ExpenseController.update);
 routes.delete('/expenses/:id', ExpenseController.delete);
-// routes actions cash flush
+// routes actions cash flow
+routes.post('/cashflow', CashflowController.create);
 
 export default routes;
