@@ -5,8 +5,9 @@ import Client from '../app/models/Client';
 import Orderservice from '../app/models/Orderservice';
 import Expense from '../app/models/Expense';
 import Cashflow from '../app/models/Cashflow';
+import Dog from '../app/models/Dog';
 
-const models = [User, Client, Orderservice, Expense, Cashflow];
+const models = [User, Client, Orderservice, Expense, Cashflow, Dog];
 
 class Database {
   constructor() {

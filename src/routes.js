@@ -6,6 +6,7 @@ import ClientController from './app/controllers/ClientController';
 import OrderserviceController from './app/controllers/OrderserviceController';
 import ExpenseController from './app/controllers/ExpenseController';
 import CashflowController from './app/controllers/CashflowController';
+import DogController from './app/controllers/DogController';
 // Middleware Authorization
 import authMiddleware from './app/middlewares/auth';
 //
@@ -30,5 +31,7 @@ routes.put('/expenses', ExpenseController.update);
 routes.delete('/expenses/:id', ExpenseController.delete);
 // routes actions cash flow
 routes.post('/cashflow', CashflowController.create);
+// routes actions dog
+routes.post('/dogs', DogController.create);
 
 export default routes;
